@@ -18,7 +18,7 @@ export default function ProductGrid() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="error">Error: {error.message}</div>;
   }
 
   return (

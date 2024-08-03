@@ -9,11 +9,10 @@ type Chip =
       fmyChipLocalName: string;
     };
 
-type Model = {
+export type Model = {
   modelCode: string;
   displayName: string;
   thumbUrl: string;
-  largeUrl: string;
   priceDisplay: string;
   fmyChipList: Chip[];
 };
