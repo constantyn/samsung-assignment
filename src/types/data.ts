@@ -1,4 +1,4 @@
-type Chip =
+type ProductModelChip =
   | {
       fmyChipType: 'COLOR';
       fmyChipLocalName: string;
@@ -9,18 +9,18 @@ type Chip =
       fmyChipLocalName: string;
     };
 
-export type Model = {
+export type ProductModel = {
   modelCode: string;
   displayName: string;
   thumbUrl: string;
   priceDisplay: string;
-  fmyChipList: Chip[];
+  fmyChipList: ProductModelChip[];
 };
 
 export type Product = {
   familyId: string;
   fmyMarketingName: string;
-  modelList: Model[];
+  modelList: ProductModel[];
 };
 
 export type Data = {

@@ -1,4 +1,4 @@
-import type { Model, Product } from '../types/data';
+import type { ProductModel, Product } from '../types/data';
 import { ChangeEvent, useMemo, useState } from 'react';
 import usePreloadImages from '../hooks/use-preload-images';
 
@@ -10,7 +10,18 @@ export default function ProductCard({ product }: Props) {
 
   usePreloadImages(product.modelList.map((model) => model.thumbUrl));
 
-  const selectedModel = useMemo<Model | undefined>(
+  const modelOptions = useMemo<(ProductModel & { label: string })[]>(
+    () =>
+      product.modelList.map((model) => ({
+        ...model,
+        label: model.fmyChipList
+          .map((chip) => chip.fmyChipLocalName)
+          .join(' - '),
+      })),
+    [product],
+  );
+
+  const selectedModel = useMemo<ProductModel | undefined>(
     () =>
       product.modelList.find(
         (model) => model.modelCode === selectedProductModel,
@@ -33,11 +44,9 @@ export default function ProductCard({ product }: Props) {
             }
             className="product-card__model-selector"
           >
-            {product.modelList.map((model) => (
+            {modelOptions.map((model) => (
               <option value={model.modelCode} key={model.modelCode}>
-                {model.fmyChipList
-                  .map((chip) => chip.fmyChipLocalName)
-                  .join(' - ')}
+                {model.label}
               </option>
             ))}
           </select>
