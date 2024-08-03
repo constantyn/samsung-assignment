@@ -1,17 +1,13 @@
-enum FmyChipType {
-  'COLOR',
-  'MOBILE MEMORY',
-}
-
-type ChipOptionListItem = {
-  optionCode: string;
-  optionLocalName: string;
-};
-
-type ChipOption = {
-  fmyChipType: keyof FmyChipType;
-  optionList: ChipOptionListItem[];
-};
+type Chip =
+  | {
+      fmyChipType: 'COLOR';
+      fmyChipLocalName: string;
+      fmyChipCode: string;
+    }
+  | {
+      fmyChipType: 'MOBILE MEMORY';
+      fmyChipLocalName: string;
+    };
 
 type Model = {
   modelCode: string;
@@ -19,12 +15,12 @@ type Model = {
   thumbUrl: string;
   largeUrl: string;
   priceDisplay: string;
+  fmyChipList: Chip[];
 };
 
 export type Product = {
   familyId: string;
   fmyMarketingName: string;
-  chipOptions: ChipOption[];
   modelList: Model[];
 };
 

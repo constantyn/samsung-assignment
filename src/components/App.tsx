@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductGrid from './ProductGrid';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import './App.css';
+import './App.scss';
 
 const queryClient = new QueryClient();
 

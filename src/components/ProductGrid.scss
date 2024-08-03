@@ -1,21 +1,38 @@
+@import "../style/variables";
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 0.5rem;
+  }
 
   .product-card {
     min-height: 15rem;
     border: 1px solid #CCC;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    
+    @media (max-width: $breakpoint-mobile) {
+      padding: 0.5rem;
+    }
 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    // todo: does this work?
+    transition: background-image 1s ease;
+    background-blend-mode: multiply;
 
-    &__title {
+    &__model-selector {
+      font-size: 1.3rem;
+      background-color: rgb(0, 0, 0, .2);
+      border: none;
       font-weight: bold;
-      background-color: rgb(0, 0, 0, .2)
+      width: 100%;
     }
+
   }
 }

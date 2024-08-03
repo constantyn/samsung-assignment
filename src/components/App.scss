@@ -1,0 +1,10 @@
+@import "../style/variables";
+
+.app {
+    padding: 2rem;
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 0.5rem;
+    }
+
+}
