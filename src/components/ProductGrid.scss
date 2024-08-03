@@ -1,0 +1,21 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+
+  .product-card {
+    min-height: 15rem;
+    border: 1px solid #CCC;
+    padding: 1rem;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &__title {
+      font-weight: bold;
+      background-color: rgb(0, 0, 0, .2)
+    }
+  }
+}
