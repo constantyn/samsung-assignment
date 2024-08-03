@@ -23,7 +23,7 @@ export type Product = {
   modelList: ProductModel[];
 };
 
-export type Data = {
+export type ProductApiResult = {
   statusCode: number;
   statusMessage: string;
   resultData: { productList: Product[] };
