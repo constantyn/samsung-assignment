@@ -4,7 +4,7 @@
   gap: var(--sa-gap);
   margin: var(--sa-gap);
 
-  @media (max-width: var(--sa-breakpoint-mobile)) {
+  @media (max-width: 600px) {
     gap: var(--sa-gap-mobile);
     margin: var(--sa-gap-mobile);
   }
@@ -52,7 +52,7 @@
       transition: background-image 1s ease;
       background-blend-mode: multiply;
 
-      @media (max-width: var(--sa-breakpoint-mobile)) {
+      @media (max-width: 600px) {
         min-height: 15rem;
       }
 
