@@ -1,8 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Samsung frontend assignment august 2nd 2024
+## Constantijn van de Wetering
 
 In the project directory, you can run:
 
