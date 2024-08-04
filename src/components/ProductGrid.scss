@@ -86,9 +86,13 @@
       }
     }
   }
+
+  &__loading {
+    padding: var(--sa-gap);
+    font-weight: bold;
+  }
 }
 
 .error {
-  font-weight: bold;
   color: var(--sa-error);
 }

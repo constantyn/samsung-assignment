@@ -7,11 +7,13 @@ export default function ProductGrid() {
   const { isPending, error, data } = useProducts();
 
   if (isPending) {
-    return <div>Loading...</div>;
+    return <div className="product-grid__loading">Loading...</div>;
   }
 
   if (error) {
-    return <div className="error">Error: {error.message}</div>;
+    return (
+      <div className="product-grid__loading error">Error: {error.message}</div>
+    );
   }
 
   return (
