@@ -13,7 +13,7 @@ export type ProductModel = {
   modelCode: string;
   displayName: string;
   thumbUrl: string;
-  priceDisplay: string;
+  priceDisplay: string | null;
   fmyChipList: ProductModelChip[];
   pdpUrl: string;
 };
