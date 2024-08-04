@@ -15,6 +15,7 @@ export type ProductModel = {
   thumbUrl: string;
   priceDisplay: string;
   fmyChipList: ProductModelChip[];
+  pdpUrl: string;
 };
 
 export type Product = {

@@ -1,5 +1,5 @@
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
-import { ProductApiResult } from '../types/productApiResult';
+import { ProductApiResult } from '../types/product-api-result';
 
 const MODELS = [
   'SM-F741BLBGEUB',

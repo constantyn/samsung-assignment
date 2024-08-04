@@ -1,4 +1,4 @@
-import type { ProductModel, Product } from '../types/productApiResult';
+import type { ProductModel, Product } from '../types/product-api-result';
 import { ChangeEvent, useMemo, useState } from 'react';
 import usePreloadImages from '../hooks/use-preload-images';
 
