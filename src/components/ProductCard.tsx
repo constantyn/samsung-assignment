@@ -59,9 +59,20 @@ export default function ProductCard({ product }: Props) {
           backgroundImage: `url(${selectedModel?.thumbUrl})`,
         }}
       >
-        {selectedModel?.priceDisplay && (
-          <div className="product-card__price">
-            {selectedModel?.priceDisplay}
+        {selectedModel?.pdpUrl && (
+          <div className="product-card__footer">
+            <a
+              href={
+                selectedModel?.pdpUrl
+                  ? `https://samsung.com${selectedModel?.pdpUrl}`
+                  : undefined
+              }
+              target="_blank"
+              rel="noreferrer"
+              className=""
+            >
+              {selectedModel?.priceDisplay || 'Koop nu'}
+            </a>
           </div>
         )}
       </div>

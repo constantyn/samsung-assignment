@@ -1,3 +1,15 @@
+:root {
+  --sa-primary: #2189ff;
+  --sa-primary-dark: #006bea;
+  --sa-error: red;
+  --sa-grey: #cccccc;
+  --sa-grey-light: f6f6f6;
+  --sa-gap: 2rem;
+  --sa-gap-mobile: 0.5rem;
+  --sa-breakpoint-mobile: 600px;
+  --sa-border-radius: 0.7rem;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
